@@ -7,7 +7,7 @@
 - Interface
 - Serviços
 
-2. Informações sobre o banco de dados
+2. Informações sobre o [banco de dados](https://github.com/DanDiniz/Sistema_Aluguel_de_carros_JDBC_Java/blob/main/db.properties)
 
 >user=developer
 >
