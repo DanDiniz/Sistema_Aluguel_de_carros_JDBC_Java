@@ -25,12 +25,12 @@ DROP TABLE IF EXISTS `cliente`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cliente` (
-  `Id` int NOT NULL,
-  `nome` varchar(45) NOT NULL,
-  `email` varchar(45) NOT NULL,
-  `cpf` varchar(45) NOT NULL,
+  `Id` int NOT NULL AUTO_INCREMENT,
+  `Nome` varchar(45) NOT NULL,
+  `Email` varchar(45) NOT NULL,
+  `Cpf` varchar(45) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -51,20 +51,20 @@ DROP TABLE IF EXISTS `emprestimo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `emprestimo` (
-  `Id` int NOT NULL,
-  `Cliente` int NOT NULL,
+  `Id` int NOT NULL AUTO_INCREMENT,
+  `cliente` int NOT NULL,
   `veiculo` int NOT NULL,
   `multa` double NOT NULL,
-  `Data_Emprestimo` date NOT NULL,
-  `previsao_entrega` date NOT NULL,
-  `Data_devolucao` date DEFAULT NULL,
-  `Total_emprestimo` double NOT NULL,
+  `data emprestimo` date NOT NULL,
+  `previsao entrega` date NOT NULL,
+  `data devolucao` date DEFAULT NULL,
+  `total` double NOT NULL,
   PRIMARY KEY (`Id`),
-  KEY `Cliente_idx` (`Cliente`),
-  KEY `Veiculo_idx` (`veiculo`),
-  CONSTRAINT `cliente` FOREIGN KEY (`Cliente`) REFERENCES `cliente` (`Id`),
+  KEY `cliente_idx` (`cliente`),
+  KEY `veiculo_idx` (`veiculo`),
+  CONSTRAINT `cliente` FOREIGN KEY (`cliente`) REFERENCES `cliente` (`Id`),
   CONSTRAINT `veiculo` FOREIGN KEY (`veiculo`) REFERENCES `veiculo` (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -85,10 +85,10 @@ DROP TABLE IF EXISTS `marca_veiculo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `marca_veiculo` (
-  `Id` int NOT NULL,
+  `Id` int NOT NULL AUTO_INCREMENT,
   `Nome` varchar(45) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -109,14 +109,14 @@ DROP TABLE IF EXISTS `veiculo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `veiculo` (
-  `Id` int NOT NULL,
-  `Modelo` varchar(45) NOT NULL,
-  `Marca` int DEFAULT NULL,
-  `Kilometragem` double NOT NULL,
+  `Id` int NOT NULL AUTO_INCREMENT,
+  `modelo` varchar(45) NOT NULL,
+  `marca` int NOT NULL,
+  `km` int NOT NULL,
   PRIMARY KEY (`Id`),
-  KEY `Id_idx` (`Marca`),
-  CONSTRAINT `Id` FOREIGN KEY (`Marca`) REFERENCES `marca_veiculo` (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `marca_idx` (`marca`),
+  CONSTRAINT `marca` FOREIGN KEY (`marca`) REFERENCES `marca_veiculo` (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -137,11 +137,11 @@ DROP TABLE IF EXISTS `vendendor`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `vendendor` (
-  `Id` int NOT NULL,
-  `Nome` varchar(45) NOT NULL,
-  `Cpf` varchar(45) NOT NULL,
+  `Id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(45) NOT NULL,
+  `cpf` varchar(45) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -163,4 +163,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-09-28 19:44:54
+-- Dump completed on 2023-09-29 20:42:43
