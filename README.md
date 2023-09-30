@@ -7,8 +7,7 @@
 - Interface
 - Serviços
 
-2. Informações sobre o [BANDO DE DADOS](https://github.com/DanDiniz/Sistema_Aluguel_de_carros_JDBC_Java/blob/main/db.properties)
-
+1. INFORMAÇÃO SOBRE O BANCO DE DADOS
 >user=developer
 >
 >password=1234567
