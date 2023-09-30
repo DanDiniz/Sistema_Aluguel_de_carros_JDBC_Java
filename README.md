@@ -8,9 +8,13 @@
 - Serviços
 
 2. Informações sobre o banco de dados
+
 >user=developer
-password=1234567
-dburl=jdbc:mysql://localhost:3306/locadoracarrosma
-useSSL=false
+>
+>password=1234567
+>
+>dburl=jdbc:mysql://localhost:3306/locadoracarrosma
+>
+>useSSL=false
 
 
