@@ -1,4 +1,19 @@
-# Sistema_Aluguel_de_carros_JDBC_Java
-Projeto feito por mim (Desde a criação do Banco de dados aos códigos em java) implementando meus conhecimentos na linguagem
+# Implementando Projeto JDBC em java
+### PROJETO : BACKEND COM JDBC PARA EMPRESA DE ALUGUEL DE VEICULOS (BÁSICO)
+---
+1. Tópicos Trabalhados
+- Orientação a Objetos
+- Linguagem SQL
+- Interface
+- Serviços
 
-[IREI POSTAR TODA A EVOLUÇÃO DE PROJETO E COMMITS ATUALIZADOS POR AQUI]
+1. INFORMAÇÃO SOBRE O BANCO DE DADOS
+>user=developer
+>
+>password=1234567
+>
+>dburl=jdbc:mysql://localhost:3306/locadoracarrosma
+>
+>useSSL=false
+
+
