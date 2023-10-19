@@ -7,7 +7,7 @@
 - Interface
 - Serviços
 
-1. INFORMAÇÃO SOBRE O BANCO DE DADOS
+2. INFORMAÇÃO SOBRE O BANCO DE DADOS
 >user=developer
 >
 >password=1234567
